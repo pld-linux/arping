@@ -35,7 +35,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 
 install arping $RPM_BUILD_ROOT%{_sbindir}/arping
-install arping $RPM_BUILD_ROOT%{_sbindir}/arping-scan-net.sh
+install arping-scan-net.sh \
+	$RPM_BUILD_ROOT%{_sbindir}/arping-scan-net.sh
 install arping.8 $RPM_BUILD_ROOT%{_mandir}/man8/arping.8
 
 %clean
