@@ -34,7 +34,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d -m 755 $RPM_BUILD_ROOT%{_sbindir}/arping
+install -d -m 755 $RPM_BUILD_ROOT%{_sbindir}
 install -d -m 755 $RPM_BUILD_ROOT%{_usr}/doc
 install -d -m 755 $RPM_BUILD_ROOT%{_mandir}/man8
 install -c arping $RPM_BUILD_ROOT%{_sbindir}/arping
