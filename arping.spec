@@ -1,16 +1,13 @@
-#
 
 Summary:	ARPing
 Summary(pl):	ARPing
 Name:		arping
 Version:	2.04
 Release:	0.1
-#Epoch:
 License:	GPL
 Group:		Networking/Admin
 Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
-# Source0-md5:
-#Patch0:
+# Source0-md5:	5fbf10272dcb5040cbfb4d540179fb99
 BuildRequires:	linux-libc-headers
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
@@ -25,8 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
   ARP,
 
 %prep
-%setup  -q -n %{name}-%{version}
-#%patch0 -p0
+%setup -q
 
 %build
 
