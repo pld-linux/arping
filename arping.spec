@@ -11,6 +11,9 @@ Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
 BuildRequires:	linux-libc-headers
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
+Provides:	arping
+Obsoletes:	arping
+Obsoletes:	iputils-arping
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
