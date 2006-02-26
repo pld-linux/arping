@@ -10,6 +10,7 @@ Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
 # Source0-md5:	96e7c2ce8ae09046e264a314eeaac4dd
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
+BuildRequires:	sed >= 4.0
 Provides:	arping
 Obsoletes:	arping
 Obsoletes:	iputils-arping
@@ -26,9 +27,13 @@ ARP.
 
 %prep
 %setup -q
+sed '/CC.*arping-2/s/-g/$(CFLAGS)/' \
+	-i Makefile
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
