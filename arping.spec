@@ -8,6 +8,7 @@ License:	GPL
 Group:		Networking/Admin
 Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
 # Source0-md5:	96e7c2ce8ae09046e264a314eeaac4dd
+URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	sed >= 4.0
