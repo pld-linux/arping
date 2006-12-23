@@ -1,4 +1,3 @@
-# TODO: optflags
 Summary:	ARPing - ping an address by ARP packets
 Summary(pl):	ARPing - pingowanie adresów pakietami ARP
 Name:		arping
