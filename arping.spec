@@ -1,5 +1,5 @@
 Summary:	ARPing - ping an address by ARP packets
-Summary(pl.UTF-8):   ARPing - pingowanie adresów pakietami ARP
+Summary(pl.UTF-8):	ARPing - pingowanie adresów pakietami ARP
 Name:		arping
 Version:	2.05
 Release:	1
