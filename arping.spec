@@ -1,5 +1,5 @@
 Summary:	ARPing - ping an address by ARP packets
-Summary(pl):	ARPing - pingowanie adresów pakietami ARP
+Summary(pl.UTF-8):   ARPing - pingowanie adresÃ³w pakietami ARP
 Name:		arping
 Version:	2.05
 Release:	1
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 arping pings given address on given device by ARP packets, using given
 source address.
 
-%description -l pl
-arping pinguje podany adres na podanym interfejsie wysy³aj±c pakiety
+%description -l pl.UTF-8
+arping pinguje podany adres na podanym interfejsie wysyÅ‚ajÄ…c pakiety
 ARP.
 
 %prep
