@@ -15,7 +15,6 @@ Provides:	arping
 Obsoletes:	arping
 Obsoletes:	iputils-arping
 Conflicts:	iputils <= 1:ss021109-2
-Conflicts:	rc-scripts < 0.4.1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
