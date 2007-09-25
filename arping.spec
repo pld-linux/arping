@@ -2,7 +2,7 @@ Summary:	ARPing - ping an address by ARP packets
 Summary(pl.UTF-8):	ARPing - pingowanie adresów pakietami ARP
 Name:		arping
 Version:	2.05
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Admin
 Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ Provides:	arping
 Obsoletes:	arping
 Obsoletes:	iputils-arping
 Conflicts:	iputils <= 1:ss021109-2
+Conflicts:	rc-scripts < 0.4.1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
