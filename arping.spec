@@ -11,6 +11,7 @@ URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRequires:	sed >= 4.0
+Requires:	bc
 Provides:	arping
 Obsoletes:	arping
 Obsoletes:	iputils-arping
