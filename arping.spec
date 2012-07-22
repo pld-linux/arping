@@ -28,9 +28,9 @@ ARP.
 
 %prep
 %setup -q
-%configure
 
 %build
+%configure
 %{__make}
 
 %install
