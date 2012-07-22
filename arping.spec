@@ -1,14 +1,14 @@
 Summary:	ARPing - ping an address by ARP packets
 Summary(pl.UTF-8):	ARPing - pingowanie adresów pakietami ARP
 Name:		arping
-Version:	2.08
-Release:	4
+Version:	2.12
+Release:	1
 License:	GPL v2
 Group:		Networking/Admin
-Source0:	ftp://ftp.habets.pp.se/pub/synscan/%{name}-%{version}.tar.gz
-# Source0-md5:	36dba82f8a6084b634aa6f4aac6225c6
+Source0:	http://www.habets.pp.se/synscan/files/%{name}-%{version}.tar.gz
+# Source0-md5:	47e0db7fed9f1297c598a24cd476911d
 URL:		http://www.habets.pp.se/synscan/programs.php?prog=arping
-BuildRequires:	libnet-devel
+BuildRequires:	libnet-devel > 1.1
 BuildRequires:	libpcap-devel
 BuildRequires:	sed >= 4.0
 Requires:	bc
@@ -28,22 +28,18 @@ ARP.
 
 %prep
 %setup -q
-sed '/CC.*arping-2/s/-g/$(CFLAGS)/' \
-	-i Makefile
+%configure
 
 %build
-%{__make} \
-	CC="%{__cc}" \
-	CFLAGS="%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install arping $RPM_BUILD_ROOT%{_sbindir}/arping
-install arping-scan-net.sh \
+install extra/arping-scan-net.sh \
 	$RPM_BUILD_ROOT%{_sbindir}/arping-scan-net.sh
-install arping.8 $RPM_BUILD_ROOT%{_mandir}/man8/arping.8
 
 %clean
 rm -rf $RPM_BUILD_ROOT
