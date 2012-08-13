@@ -2,7 +2,7 @@ Summary:	ARPing - ping an address by ARP packets
 Summary(pl.UTF-8):	ARPing - pingowanie adresów pakietami ARP
 Name:		arping
 Version:	2.12
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Networking/Admin
 Source0:	http://www.habets.pp.se/synscan/files/%{name}-%{version}.tar.gz
@@ -12,8 +12,6 @@ BuildRequires:	libnet-devel > 1.1
 BuildRequires:	libpcap-devel
 BuildRequires:	sed >= 4.0
 Requires:	bc
-Provides:	arping
-Obsoletes:	arping
 Obsoletes:	iputils-arping
 Conflicts:	iputils <= 1:ss021109-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
