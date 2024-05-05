@@ -1,13 +1,11 @@
---- arping-2.23/configure.ac.orig	2023-12-23 15:50:50.457952760 +0100
-+++ arping-2.23/configure.ac	2023-12-23 16:52:39.041194975 +0100
-@@ -22,9 +22,9 @@ AC_PROG_MAKE_SET
- CPPFLAGS="$CPPFLAGS -D_DEFAULT_SOURCE=1"
+--- arping-2.24/configure.ac.orig	2024-05-05 21:42:00.539234006 +0200
++++ arping-2.24/configure.ac	2024-05-05 21:47:33.224098364 +0200
+@@ -37,8 +37,8 @@ CHECK_COMPILER_OPTION([-std=c99])
  
  # Checks for libraries.
--AC_CHECK_LIB([m], [sqrt])
+ AC_CHECK_LIB([m], [sqrt])
 -AC_CHECK_LIB([socket], [socket])
 -AC_CHECK_LIB([nsl], [gethostbyname])
-+AC_SEARCH_LIBS([sqrt], [m])
 +AC_SEARCH_LIBS([socket], [socket])
 +AC_SEARCH_LIBS([gethostbyname], [nsl])
  AC_CHECK_LIB([cap], [cap_init])
