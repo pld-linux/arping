@@ -1,12 +1,12 @@
 Summary:	ARPing - ping an address by ARP packets
 Summary(pl.UTF-8):	ARPing - pingowanie adresów pakietami ARP
 Name:		arping
-Version:	2.24
+Version:	2.25
 Release:	1
 License:	GPL v2
 Group:		Networking/Admin
 Source0:	https://www.habets.pp.se/synscan/files/%{name}-%{version}.tar.gz
-# Source0-md5:	b4d49d2805fc7db1e7c981325b105be2
+# Source0-md5:	af8a72c8d83bc9b3b0979475b084ed24
 Patch0:		%{name}-nolibs.patch
 URL:		https://www.habets.pp.se/synscan/programs_arping.html
 BuildRequires:	autoconf >= 2.61
